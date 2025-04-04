@@ -153,14 +153,18 @@ body {
 
 /* Menu Icon (Three Bars) */
 .menu-icon {
-  font-size: 24px;       /* Adjust icon size */
-  color: #333;           /* Black for visibility */
-  cursor: pointer;
-  z-index: 1100;
-  margin-right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    margin-right: 15px;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s;
 }
+
 .menu-icon:hover {
-  color: #3498db;
+    background-color: #2980b9;
 }
 
 /* Map Selector Dropdown */
