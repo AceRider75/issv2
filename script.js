@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function sendSupplyRequestToAPI(itemType) {
-    return fetch("/api/supply-request", {
+    return fetch("/api/supply-request.js", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ itemType, mapFile: currentMap.replace(".png", ".csv") })
