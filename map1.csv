@@ -1,0 +1,4 @@
+sno,item_type,item_name,Expiry_Date,centre_coordinates,length,breadth
+1,TypeA,Item1,2025-04-10,100:200,50,30
+2,TypeB,Item2,2025-04-12,300:400,60,40
+3,TypeC,Item3,2025-04-15,500:600,70,50
