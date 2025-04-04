@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
   loadMapData(currentMap);
   addLog("Application initialized");
 
-  // Functions
   function openSidebar() {
     sidebar.classList.add("open");
     sidebar.style.width = "300px";
@@ -169,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // API integration call (dummy simulation in this example)
+    // Dummy API call – replace with actual API call per project requirements.
     sendSupplyRequestToAPI(itemType)
       .then((response) => {
         itemTypeInput.value = "";
@@ -183,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function sendSupplyRequestToAPI(itemType) {
-    // Dummy API call – replace this with your actual API call per project requirements.
     return new Promise((resolve, reject) => {
       console.log(`Sending supply request for: ${itemType}`);
       setTimeout(() => {
@@ -197,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const timeString = now.toLocaleTimeString();
     logs.push(`[${timeString}][${action}]`);
 
-    // Keep only the latest 100 log entries
     if (logs.length > 100) {
       logs.shift();
     }
@@ -216,4 +213,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
 
