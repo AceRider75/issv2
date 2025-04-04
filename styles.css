@@ -192,7 +192,7 @@ body {
   z-index: 1;
 }
 
-/* Pseudo-element to render graph-like grid lines over the background */
+/* Pseudo-element to render black grid lines over the background */
 .map-container::after {
   content: "";
   position: absolute;
@@ -203,8 +203,8 @@ body {
   pointer-events: none;
   background-size: 50px 50px;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.85) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 1px, transparent 1px);
+    linear-gradient(to right, #000 1px, transparent 1px),
+    linear-gradient(to bottom, #000 1px, transparent 1px);
   z-index: 5;
 }
 
@@ -262,5 +262,3 @@ body {
 .item-info div {
   margin-bottom: 5px;
 }
-
-
