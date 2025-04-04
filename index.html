@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Map Grid System</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-dN1PKbKjOMZYKyWb1Eb1LuOTC58gWD+hOeMYScn9R9S2R3PNsXzQKCWoHclXMhy3JeYB2CaF9wv8+qNj/2T5Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="container">
-        <!-- Sidebar for options -->
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h2>Dashboard Options</h2>
-                <span class="close-btn" id="closeSidebar">&times;</span>
-            </div>
-            <div class="sidebar-content">
-                <div class="sidebar-option" id="supplyRequestOption">Create Supply Request</div>
-                <div class="sidebar-option" id="viewLogsOption">View Action Logs</div>
-            </div>
-            
-            <!-- Supply Request Form -->
-            <div class="supply-request-form" id="supplyRequestForm">
-                <h3>Create Supply Request</h3>
-                <label for="itemType">Item Type:</label>
-                <input type="text" id="itemType" placeholder="Enter item type">
-                <button id="submitSupplyRequest">Submit Request</button>
-            </div>
-            
-            <!-- Logs Container -->
-            <div class="logs-container" id="logsContainer">
-                <h3>System Logs</h3>
-                <div class="logs" id="logs"></div>
-            </div>
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h2>Dashboard Options</h2>
+          <span class="close-btn" id="closeSidebar">&times;</span>
         </div>
-        
-        <!-- Main Content Area -->
-        <div class="main-content">
-            <div class="top-bar">
-                <!-- Menu Icon to toggle sidebar -->
-                <div class="menu-icon" id="menuIcon">
-                    <i class="fas fa-bars"></i>
-                </div>
-                
-                <!-- Map Selection Dropdown -->
-                <div class="map-switcher">
-                    <select id="mapSelector">
-                        <option value="map1.png">Map 1</option>
-                        <option value="map2.png">Map 2</option>
-                        <option value="map3.png">Map 3</option>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- Map Container with Items -->
-            <div class="map-container">
-                <img id="mapImage" src="map1.png" alt="Map Background">
-                <img id="mapImage" src="map2.png" alt="Map Background">
-                <img id="mapImage" src="map3.png" alt="Map Background">
-                <div id="itemsContainer"></div>
-            </div>
+        <div class="sidebar-content">
+          <div class="sidebar-option" id="supplyRequestOption">
+            Create Supply Request
+          </div>
+          <div class="sidebar-option" id="viewLogsOption">
+            View Action Logs
+          </div>
         </div>
+        <!-- Supply Request Form -->
+        <div class="supply-request-form" id="supplyRequestForm">
+          <h3>Create Supply Request</h3>
+          <label for="itemType">Item Type:</label>
+          <input type="text" id="itemType" placeholder="Enter item type" />
+          <button id="submitSupplyRequest">Submit Request</button>
+        </div>
+        <!-- Logs Container -->
+        <div class="logs-container" id="logsContainer">
+          <h3>System Logs</h3>
+          <div class="logs" id="logs"></div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="top-bar">
+          <div class="menu-icon" id="menuIcon">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="map-switcher">
+            <select id="mapSelector">
+              <option value="map1.png">Map 1</option>
+              <option value="map2.png">Map 2</option>
+              <option value="map3.png">Map 3</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Map Container with Background Map & Grid Overlay -->
+        <div class="map-container" id="mapContainer">
+          <!-- Container for interactive grid items -->
+          <div id="itemsContainer"></div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
+
