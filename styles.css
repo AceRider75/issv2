@@ -1,268 +1,266 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    height: 100vh;
-    overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Container for Sidebar and Main Content */
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 /* Sidebar Styling */
 .sidebar {
-    width: 0;
-    height: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: #2c3e50;
-    overflow-x: hidden;
-    transition: 0.5s;
-    color: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #2c3e50;
+  overflow-x: hidden;
+  transition: 0.5s;
+  color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar.open {
-    width: 300px;
+  width: 300px;
 }
 
 .sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15px;
-    border-bottom: 1px solid #34495e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  border-bottom: 1px solid #34495e;
 }
 
 .close-btn {
-    font-size: 30px;
-    cursor: pointer;
-    transition: color 0.3s;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 .close-btn:hover {
-    color: #e74c3c;
+  color: #e74c3c;
 }
 
 .sidebar-content {
-    padding: 20px 15px;
+  padding: 20px 15px;
 }
 
 .sidebar-option {
-    padding: 12px 15px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    background-color: #34495e;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  background-color: #34495e;
 }
 
 .sidebar-option:hover {
-    background-color: #3498db;
+  background-color: #3498db;
 }
 
 /* Supply Request Form */
 .supply-request-form {
-    padding: 20px 15px;
-    display: none;
+  padding: 20px 15px;
+  display: none;
 }
 
 .supply-request-form h3 {
-    margin-bottom: 15px;
-    color: #3498db;
+  margin-bottom: 15px;
+  color: #3498db;
 }
 
 .supply-request-form label {
-    display: block;
-    margin-bottom: 8px;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .supply-request-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
 }
 
 .supply-request-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .supply-request-form button:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 /* Logs Container */
 .logs-container {
-    padding: 20px 15px;
-    display: none;
+  padding: 20px 15px;
+  display: none;
 }
 
 .logs-container h3 {
-    margin-bottom: 15px;
-    color: #3498db;
+  margin-bottom: 15px;
+  color: #3498db;
 }
 
 .logs {
-    height: 300px;
-    overflow-y: auto;
-    background-color: #34495e;
-    padding: 10px;
-    border-radius: 4px;
-    font-family: monospace;
-    font-size: 14px;
+  height: 300px;
+  overflow-y: auto;
+  background-color: #34495e;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 14px;
 }
 
 .logs div {
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #445566;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #445566;
 }
 
 /* Main Content Area */
 .main-content {
-    flex: 1;
-    transition: margin-left 0.5s;
-    padding: 20px;
-    overflow-y: auto;
+  flex: 1;
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .top-bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
 }
 
 .menu-icon {
-    font-size: 22px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 4px;
-    margin-right: 15px;
-    background-color: #3498db;
-    color: white;
-    transition: background-color 0.3s;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  margin-right: 15px;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.3s;
 }
 
 .menu-icon:hover {
-    background-color: #2980b9;
+  background-color: #2980b9;
 }
 
 .map-switcher select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
 }
 
-/* Map Container and Grid Overlay */
+/* Map Container with Background Map & Grid Overlay */
 .map-container {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 140px);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 140px);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Background image (map) will be set via inline style or JS */
+  z-index: 1;
 }
 
-/* Pseudo-element for graph-like grid lines */
+/* Pseudo-element to render graph-like grid lines over the background */
 .map-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background-size: 40px 40px;
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
-    z-index: 5;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.85) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 1px, transparent 1px);
+  z-index: 5;
 }
 
-#mapImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: relative;
-    z-index: 1; /* Map image beneath the grid overlay */
-}
-
+/* Container for the interactive grid items */
 #itemsContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10; /* Interactive items above the grid lines */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
 /* Item (Grid Element) Styling */
 .item {
-    position: absolute;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    z-index: 20;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 20;
 }
 
 .item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 30;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 30;
 }
 
+/* Tooltip/info box for each grid item */
 .item-info {
-    display: none;
-    position: absolute;
-    top: -80px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(44, 62, 80, 0.95);
-    color: white;
-    padding: 12px;
-    border-radius: 4px;
-    width: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 40;
+  display: none;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(44, 62, 80, 0.95);
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 40;
 }
 
 .item:hover .item-info {
-    display: block;
+  display: block;
 }
 
 .item-info div {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
+
 
